@@ -48,22 +48,3 @@ def insert_to_mongo(result):
 
 
 
-
-
-
-# class MongoDB:
-#     def __init__(self):
-#         self.host = os.getenv("MONGO_HOST")
-#         self.db_name = os.getenv("MONGO_DB")
-#
-#         self.client = MongoClient(f"mongodb://{self.host}:27017")
-#         self.db = self.client[self.db_name]
-#         self.users = self.db.users
-#
-#     def insert_user(self, user: dict):
-#         result = self.users.insert_one(user)
-#         return {"inserted_id": str(result.inserted_id)}
-#
-#     def get_users(self):
-#         users = list(self.users.find({}, {"_id": 0}))
-#         return users
